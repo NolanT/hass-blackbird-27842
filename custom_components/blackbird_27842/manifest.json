@@ -6,6 +6,7 @@
     "requirements": ["git+https://github.com/NolanT/pyavcontrol@ba7feb3988e5bc326c11d9337d7dcf0192be17df"],
     "dependencies": [],
     "codeowners": ["NolanT"],
+    "config_flow": true,
     "iot_class": "local_polling",
     "supported_brands": {
         "monoprice": "Monoprice"
