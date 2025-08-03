@@ -30,7 +30,7 @@ DATA_SCHEMA = vol.Schema({
 async def validate_input(hass: core.HomeAssistant, data: Dict[str, Any]) -> Dict[str, Any]:
     """Validate the user input allows us to connect."""
     try:
-        from pyavcontrol import get_async_client
+        from .client_wrapper import get_async_client
         
         client = get_async_client("monoprice_blackbird_27842")
         await client.connect(data[CONF_HOST], data[CONF_PORT], timeout=DEFAULT_TIMEOUT)

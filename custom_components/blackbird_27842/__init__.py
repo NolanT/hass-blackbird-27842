@@ -20,7 +20,7 @@ PLATFORMS = ["select", "switch"]
 async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
     """Set up Blackbird from a config entry."""
     try:
-        from pyavcontrol import get_async_client
+        from .client_wrapper import get_async_client
         
         # Create the client
         client = get_async_client("monoprice_blackbird_27842")
