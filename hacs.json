@@ -1,7 +1,7 @@
 {
   "name": "Monoprice Blackbird 27842 HDMI Matrix",
   "content_in_root": false,
-  "filename": "blackbird-27842",
+  "filename": "blackbird_27842",
   "country": ["US"],
   "homeassistant": "2025.7.0",
   "iot_class": "Local Polling"
