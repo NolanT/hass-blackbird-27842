@@ -1,0 +1,45 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Monoprice Blackbird 27842 Setup",
+        "description": "Configure your Blackbird HDMI Matrix",
+        "data": {
+          "host": "IP Address",
+          "port": "Port"
+        }
+      },
+      "names": {
+        "title": "Configure Input and Output Names",
+        "description": "Customize the names for your inputs and outputs",
+        "data": {
+          "input_1": "Input 1 Name",
+          "input_2": "Input 2 Name",
+          "input_3": "Input 3 Name",
+          "input_4": "Input 4 Name",
+          "input_5": "Input 5 Name",
+          "input_6": "Input 6 Name",
+          "input_7": "Input 7 Name",
+          "input_8": "Input 8 Name",
+          "output_1": "Output 1 Name",
+          "output_2": "Output 2 Name",
+          "output_3": "Output 3 Name",
+          "output_4": "Output 4 Name",
+          "output_5": "Output 5 Name",
+          "output_6": "Output 6 Name",
+          "output_7": "Output 7 Name",
+          "output_8": "Output 8 Name"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Failed to connect to the device",
+      "invalid_host": "Invalid IP address",
+      "timeout": "Connection timeout",
+      "unknown": "Unexpected error occurred"
+    },
+    "abort": {
+      "already_configured": "Device is already configured"
+    }
+  }
+}

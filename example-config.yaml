@@ -1,0 +1,58 @@
+# Example Home Assistant configuration after setting up the integration
+# This shows how the entities will appear and can be used in automations
+
+# Example automation to switch all outputs to input 1 when "Movie Time" scene is activated
+automation:
+  - alias: "Movie Time - Switch All to Apple TV"
+    trigger:
+      - platform: state
+        entity_id: scene.movie_time
+    action:
+      - service: select.select_option
+        target:
+          entity_id:
+            - select.living_room_tv_input
+            - select.bedroom_tv_input
+            - select.kitchen_tv_input
+            - select.office_tv_input
+            - select.guest_room_tv_input
+            - select.basement_tv_input
+            - select.patio_tv_input
+            - select.garage_tv_input
+        data:
+          option: "Apple TV"  # This would be the custom name you configured
+
+# Example script to turn on matrix and set a specific configuration
+script:
+  morning_news:
+    sequence:
+      - service: switch.turn_on
+        target:
+          entity_id: switch.matrix_power
+      - delay: "00:00:05"  # Wait for matrix to power up
+      - service: select.select_option
+        target:
+          entity_id: select.living_room_tv_input
+        data:
+          option: "Cable Box"
+      - service: select.select_option
+        target:
+          entity_id: select.kitchen_tv_input
+        data:
+          option: "Cable Box"
+
+# Example dashboard card configuration
+type: entities
+title: HDMI Matrix Control
+entities:
+  - entity: switch.matrix_power
+    name: Matrix Power
+  - type: divider
+  - entity: select.living_room_tv_input
+    name: Living Room TV
+  - entity: select.bedroom_tv_input
+    name: Bedroom TV
+  - entity: select.kitchen_tv_input
+    name: Kitchen TV
+  - entity: select.office_tv_input
+    name: Office TV
