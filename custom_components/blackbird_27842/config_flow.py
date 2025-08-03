@@ -49,7 +49,7 @@ class CannotConnect(exceptions.HomeAssistantError):
     """Error to indicate we cannot connect."""
 
 
-class BlackbirdConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
+class ConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
     """Handle a config flow for Blackbird."""
 
     VERSION = 1

@@ -1,6 +1,6 @@
 """Constants for the Blackbird integration."""
 
-DOMAIN = "blackbird"
+DOMAIN = "blackbird_27842"
 
 # Configuration
 CONF_HOST = "host"
